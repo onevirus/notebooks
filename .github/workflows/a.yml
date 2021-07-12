@@ -1,0 +1,14 @@
+name: Deploy
+  
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Test
+      run: |
+        ssh -6 ec2-user@2406:da12:ce4:1900:a0fd:d34:6624:37f5
